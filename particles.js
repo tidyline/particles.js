@@ -43,6 +43,15 @@ var pJS = function (tag_id, params) {
                     width: 100,
                     height: 100
                 }
+                /*,
+                // if you want to support dynamic image
+                // change 'image' property to 'images'
+                images: [{
+                    src: '',
+                    width: 100,
+                    height: 100
+                }]
+                */
             },
             opacity: {
                 value: 1,
@@ -293,8 +302,7 @@ var pJS = function (tag_id, params) {
                 g: (Math.floor(Math.random() * (255 - 0 + 1)) + 0),
                 b: (Math.floor(Math.random() * (255 - 0 + 1)) + 0)
             }
-        }
-        else if (typeof(color.value) == 'string') {
+        } else if (typeof (color.value) == 'string') {
             this.color = color;
             this.color.rgb = hexToRgb(this.color.value);
         }
